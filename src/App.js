@@ -12,7 +12,7 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import DemoProduct from './pages/DemoProduct';
 
-import {useDocTitle} from './components/CustomHook';
+import { useDocTitle } from './components/CustomHook';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
         duration: 1000,
         easing: 'ease-out-cubic',
       });
-    }
+    };
 
     window.addEventListener('load', () => {
       aos_init();
@@ -34,18 +34,17 @@ function App() {
 
   return (
     <>
-      <Router>
+      <Router basename="/website2">
         <ScrollToTop>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/get-demo" element={<DemoProduct />} /> 
+            <Route path="/get-demo" element={<DemoProduct />} />
           </Routes>
         </ScrollToTop>
       </Router>
     </>
   );
 }
-
 
 export default App;
